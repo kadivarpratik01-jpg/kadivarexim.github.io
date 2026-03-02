@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kadivar Exim | Global Tiles Exporter</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{background:#111;color:#fff;scroll-behavior:smooth;}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+background:#000;
+padding:15px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+header h1{color:gold;font-size:22px;}
+
+nav a{
+color:#fff;
+margin-left:25px;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{color:gold;}
+
+.slider{
+margin-top:80px;
+height:90vh;
+position:relative;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+opacity:0;
+transition:1s;
+}
+
+.slide.active{opacity:1;}
+
+.slide h2{
+font-size:48px;
+color:gold;
+margin-bottom:15px;
+}
+
+.slide p{font-size:20px;}
+
+section{
+padding:80px 50px;
+text-align:center;
+}
+
+h2.section-title{
+font-size:36px;
+margin-bottom:40px;
+color:gold;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#1a1a1a;
+padding:30px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#222;
+}
+
+footer{
+background:#000;
+padding:50px;
+text-align:center;
+}
+
+footer p{margin:10px 0;}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<h1>KADIVAR EXIM</h1>
+<nav>
+<a href="#about">About</a>
+<a href="#collection">Collections</a>
+<a href="#export">Export</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<div class="slider">
+<div class="slide active" style="background:#222;">
+<h2>Italian Slab Collection</h2>
+<p>Luxury Beyond Surface</p>
+</div>
+
+<div class="slide" style="background:#333;">
+<h2>Full Body Vitrified</h2>
+<p>Built For Global Projects</p>
+</div>
+
+<div class="slide" style="background:#444;">
+<h2>Marble Inspired Series</h2>
+<p>Where Elegance Meets Strength</p>
+</div>
+
+<div class="slide" style="background:#222;">
+<h2>Outdoor Heavy Duty Tiles</h2>
+<p>Strongest Outdoor Surface</p>
+</div>
+
+<div class="slide" style="background:#333;">
+<h2>Global Export Excellence</h2>
+<p>Shipping Containers Worldwide</p>
+</div>
+</div>
+
+<section id="about">
+<h2 class="section-title">About Kadivar Exim</h2>
+<p>Based in Morbi, Gujarat – Tile Hub of India.</p>
+<p>We export premium vitrified tiles & Italian slabs worldwide in all sizes.</p>
+</section>
+
+<section id="collection">
+<h2 class="section-title">Our Collections</h2>
+<div class="grid">
+<div class="card">
+<h3>800x2400mm</h3>
+<p>15mm Italian Slabs</p>
+</div>
+<div class="card">
+<h3>1200x1800mm</h3>
+<p>Full Body Vitrified</p>
+</div>
+<div class="card">
+<h3>600x1200mm</h3>
+<p>Wall & Floor Tiles</p>
+</div>
+<div class="card">
+<h3>All Sizes Available</h3>
+<p>Custom Orders Accepted</p>
+</div>
+</div>
+</section>
+
+<section id="export">
+<h2 class="section-title">Global Export</h2>
+<p>We export tiles to Africa, Middle East, Asia & Worldwide.</p>
+<p>Competitive Pricing | Export Packing | Fast Dispatch</p>
+</section>
+
+<section id="contact">
+<h2 class="section-title">Contact Us</h2>
+<p>📞 9909395000</p>
+<p>📧 kadivarexim@gmail.com</p>
+<p>Morbi, Gujarat, India</p>
+</section>
+
+<footer>
+<p>© 2026 Kadivar Exim | All Rights Reserved</p>
+</footer>
+
+<a href="https://wa.me/919909395000" class="whatsapp">Chat</a>
+
+<script>
+let slides=document.querySelectorAll('.slide');
+let index=0;
+setInterval(()=>{
+slides[index].classList.remove('active');
+index=(index+1)%slides.length;
+slides[index].classList.add('active');
+},3000);
+</script>
+
+</body>
+</html>
